@@ -23,6 +23,12 @@ sock.connect((TCP_IP,TCP_PORT))
 print '[INFO] Connected to server on IP:{} port:{}'.format(TCP_IP, TCP_PORT)
 
 capture = cv2.VideoCapture(0)
+ret, frame = capture.read()
+
+while not ret:
+    print 'Cam not ready'
+    ret, frame = capture.read()
+    
 
 while 1:
     ret, frame = capture.read()

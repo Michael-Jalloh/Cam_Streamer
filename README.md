@@ -1,18 +1,30 @@
 # Cam_Streamer
 
-This is a small python script that is use to stream video from a webcam over a LAN.
+These are a group of small python scripts use to stream video over a LAN.
 
 ## Usage
-start the server first 
 
-python server.py
+### Server
+Inorder to use the server program there are some python module you will need to installed. 
+open a terminal and install these modules
 
-It will ask you for your IP address and also for the port number u want to use.
+sudo apt-get install python-dev python-numpy python-opencv
 
-Now start the client 
+sudo pip install peewee
 
-python client.py
+please remember we are using opencv 2 not opencv 3.
 
-It will ask you for IP address and port number of the server machince. 
-If the IP address input was left blank then it will use 'localhost' that your computer's loop back address
-If the port input was left blank then it will use port 5000.
+There is one more module needed which is netifaces. You need to go to the page on python pypi website. Go to this [link](https://pypi.python.org/pypi/netifaces/#downloads), look for the source file at the download section. It should end with tar.gz
+
+You will see how to install the package on the page.
+
+RUNNING THE SERVER
+Before running the server your need to first create and account. So first run the manager.py program.
+
+python manager.py 
+
+follow the instructions to add a new user to your database. Without the users you wouldn't be able to logging on to the server.
+
+
+
+

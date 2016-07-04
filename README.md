@@ -19,12 +19,27 @@ There is one more module needed which is netifaces. You need to go to the page o
 You will see how to install the package on the page.
 
 RUNNING THE SERVER
+Navigate to the Server folder
 Before running the server your need to first create and account. So first run the manager.py program.
 
 python manager.py 
 
 follow the instructions to add a new user to your database. Without the users you wouldn't be able to logging on to the server.
 
+enter 'quit' when you are done to close. now run the server program. 
 
+python server.py
+
+RUNNING THE CLIENT
+Navigate to the Client folder
+Before running the client program, make sure that you have install opencv, numpy 
+
+run it by
+
+python client.py
+
+Conclusion
+==========
+Still got some work to do. Might add encryption
 
 

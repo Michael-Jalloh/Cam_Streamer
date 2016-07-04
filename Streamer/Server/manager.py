@@ -41,10 +41,15 @@ def new():
 	'''Please enter your new details'''
 	print '==' * n
 	username = raw_input('Username: ')
-	if User.select().where(User.username == username):
+	
+	try:
+		User.get(User.username == username)
+		
 		print 'Username already in use. please choose a different name.'
 		print '==' * n
 		return None
+	except:
+		pass 
 	pass1 = getpass('Password: ')
 	if pass1 == '':
 		return None

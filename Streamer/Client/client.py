@@ -3,6 +3,7 @@ import cv2
 import numpy
 from getpass import getpass
 
+n = 25
 
 def recvall(conn, count):
     buf = b''
@@ -17,10 +18,12 @@ def recvall(conn, count):
 
 try:
     sock = socket() # Create a socket object
+    print 'Hello'
     ip = raw_input('Enter IP address of server: ')
     port = input('Enter Port number of server: ')
     print '==' * n
     sock.connect((ip, port))
+    
 
     data = sock.recv(1024)
     print data
